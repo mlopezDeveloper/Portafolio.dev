@@ -61,10 +61,10 @@
         <div class=" bg-gray-900 mx-4 rounded-lg">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-16 items-center justify-between">
-                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">5+</span> Años de experiencia</P>
-                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">2+</span> Empresa en las que trabaje</P>
-                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">1+</span> Clientes felices</P>
-                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">10+</span> Proyectos finalizados</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">5<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Años de experiencia</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">2<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Empresa en las que trabaje</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">1<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Clientes felices</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">10<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Proyectos finalizados</P>
                 </div>
             </div> 
         </div>

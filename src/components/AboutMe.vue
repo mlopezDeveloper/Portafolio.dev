@@ -32,7 +32,7 @@
                         <span class="font-bold ml-2">Tecnologia\Herramientas</span>
                     </h4>
                     <div class="flex flex-wrap gap-2 mb-12">
-                        <span v-for="item in TecnoDev" :key="item.name" class="font-mono text-xs px-2 py-1 rounded bg-gray-900 text-white">{{ item.name }}</span>
+                        <span v-for="item in TecnoDev" :key="item.name" class="font-mono text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ item.name }}</span>
                     </div>
                 </div>
             </div>
