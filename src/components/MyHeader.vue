@@ -1,18 +1,18 @@
 <template>
-    <section class="select-none">
+    <header class="select-none">
         <div class="m-5 flex items-center">
             <div class="py-4 mr-5">
                 <h1 class="text-left text-8xl font-bold uppercase">
                     Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 animate-pulse">Marcos López.</span>
                 </h1>
                 <div class="border-l-2 border-gray-300 ps-5 mt-4">
-                    <p class="text-left font-medium text-gray-500 text-xs uppercase ">
+                    <p class="font-mono text-left font-medium text-gray-500 text-xs uppercase ">
                         Desarrollador de Soluciones Informáticas  
                     </p>
-                    <p class="text-left font-medium text-gray-500 text-xs uppercase">
+                    <p class="font-mono text-left font-medium text-gray-500 text-xs uppercase">
                         Amante de la tecnología y la enseñanza
                     </p>
-                    <p class="text-left font-medium text-gray-500 text-xs uppercase">
+                    <p class="font-mono text-left font-medium text-gray-500 text-xs uppercase">
                         Una buena UX es la que no te genera una pregunta
                     </p>
                 </div>
@@ -36,7 +36,7 @@
                             <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 3">
                             <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 4">
                         </div>
-                        <h4 class="text-black pr-2"><span class="font-semibold">+1</span> Cliente</h4>
+                        <h4 class="text-black pr-2 font-mono"><span class="font-semibold">+1</span> Cliente</h4>
                     </div>
 
                 </div>
@@ -61,12 +61,12 @@
         <div class=" bg-gray-900 mx-4 rounded-lg">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-16 items-center justify-between">
-                    <P class="text-gray-200"><span class="font-semibold flex justify-center">5+</span> Años de experiencia</P>
-                    <P class="text-gray-200"><span class="font-semibold flex justify-center">2+</span> Empresa en las que trabaje</P>
-                    <P class="text-gray-200"><span class="font-semibold flex justify-center">1+</span> Clientes felices</P>
-                    <P class="text-gray-200"><span class="font-semibold flex justify-center">10+</span> Proyectos finalizados</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">5+</span> Años de experiencia</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">2+</span> Empresa en las que trabaje</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">1+</span> Clientes felices</P>
+                    <P class="font-mono text-gray-200"><span class="font-semibold flex justify-center text-xl">10+</span> Proyectos finalizados</P>
                 </div>
             </div> 
         </div>
-    </section>
+    </header>
 </template>
