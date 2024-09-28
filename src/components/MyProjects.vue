@@ -2,102 +2,101 @@
     <section class="select-none pt-10">
         <div class="m-5 flex items-center">
             <div class="py-4 flex items-center w-full">
-                <h2 class="font-mono text-left text-5xl font-bold uppercase mr-4">Proyectos<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span></h2>
-                <div class="flex-grow border-b border-gray-300"></div> 
+                <h2 class="font-mono text-left text-5xl font-bold uppercase mr-4">
+                    Proyectos<span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span>
+                </h2>
+                <div class="flex-grow border-b border-gray-300"></div>
             </div>
         </div>
         <div class="bg-gray-900 rounded-lg mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
             <div ref="imageGrid"
-     class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-    <figure v-for="(imgSrc, index) in visibleImages" :key="index"
-             class="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 group">
-        <img :src="imgSrc" :alt="`Imagen ${index + 1}`" class="h-full w-full object-cover object-center" />
-        <!-- figcaption que se mostrará al hacer hover en el figure -->
-        <figcaption class="absolute px-4 text-lg text-white bg-gray-200 bottom-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p>Do you want to get notified when a new component is added to Flowbite?</p>
-        </figcaption>
-    </figure>
-</div>
-
-            <button v-if="showMoreButton" @click="showMore" class="mt-4 px-4 py-2 bg-violet-600 text-white rounded">
+                class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+                <figure v-for="(repo, index) in visibleRepos" :key="index"
+                    class="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 group">
+                    <img :src="getImageSrc(repo.name)" :alt="repo.name"
+                        class="h-full w-full object-cover object-center"
+                        @error="handleImageError(index)" /> <!-- Agregamos evento @error -->
+                    <figcaption
+                        class="absolute px-4 text-lg text-white bg-gray-200 bottom-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <p>{{ repo.name }}</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <button v-if="showMoreButton" @click="showMore" class="mt-4 px-4 py-2 bg-violet-600 text-white rounded font-mono">
                 Ver más
             </button>
-            <button v-if="showLessButton" @click="ShowLess" class="ml-2 mt-4 px-4 py-2 bg-violet-600 text-white rounded">
+            <button v-if="showLessButton" @click="showLess"
+                class="ml-2 mt-4 px-4 py-2 bg-violet-600 text-white rounded font-mono">
                 Ver menos
             </button>
         </div>
     </section>
 </template>
-
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { getGithubRepos } from '@/services/githubRepos';
 
-// Definimos el número total de imágenes que queremos mostrar
-const numImages: number = 20;
-const numImagesLess: number = 6;
-
-// Usamos una referencia para el contenedor de las imágenes
-const visibleCount = ref(6); // Cantidad de imágenes a mostrar inicialmente
-const visibleImages = ref<string[]>([]); // Imágenes que se mostrarán
+const numImagesLess = 6;
+const visibleCount = ref(6); // Cantidad inicial de repositorios a mostrar
+const visibleRepos = ref<any[]>([]); // Repositorios visibles
+const allRepos = ref<any[]>([]); // Todos los repositorios obtenidos
 const showMoreButton = ref(true); // Controla la visibilidad del botón "Ver más"
 const showLessButton = ref(false); // Controla la visibilidad del botón "Ver menos"
 
-// Cargar las imágenes al montar el componente
-onMounted(() => {
-    const allImages: string[] = []; // Array para guardar todas las imágenes
-
-    // Llenamos el array con la ruta de las imágenes
-    for (let i = 1; i <= numImages; i++) {
-        const imgSrc: string = `../../public/assets/p${i}.png`; // Ruta de las imágenes con nombres secuenciales
-        allImages.push(imgSrc);
+// Cargar repositorios al montar el componente
+onMounted(async () => {
+    try {
+        const repos = await getGithubRepos();
+        allRepos.value = repos; // Guarda todos los repositorios
+        visibleRepos.value = allRepos.value.slice(0, visibleCount.value); // Muestra los primeros 6
+        console.log('Repositorios obtenidos:', visibleRepos.value);
+    } catch (error) {
+        console.error('Error al obtener los repositorios:', error);
     }
 
-    // Establecemos las imágenes visibles inicialmente
-    visibleImages.value = allImages.slice(0, visibleCount.value);
-
-    // Si la cantidad de imágenes visibles excede la cantidad total, ocultamos el botón
-    if (visibleCount.value >= numImages) {
-        showMoreButton.value = false;
-        showLessButton.value = true;
-    }else{
-        showMoreButton.value = true;
-        showLessButton.value = false;
-    }
+    updateButtons(); // Actualiza la visibilidad de los botones
 });
 
-// Función para mostrar más imágenes
-const showMore = () => {
-    visibleCount.value += 6; // Aumentamos el número de imágenes visibles
-
-    // Actualizamos las imágenes visibles
-    if (visibleCount.value >= numImages) {
-        visibleCount.value = numImages; // No exceder el número total de imágenes
-        showMoreButton.value = false; // Ocultamos el botón si se muestran todas las imágenes
-    }else{
-        showLessButton.value = true;
-    }
-    
-    // Actualizamos visibleImages con las imágenes actuales
-    const allImages: string[] = [];
-    for (let i = 1; i <= numImages; i++) {
-        allImages.push(`../../public/assets/p${i}.png`);
-    }
-    visibleImages.value = allImages.slice(0, visibleCount.value);
+// Función para obtener la ruta de la imagen basada en el nombre del repo
+const getImageSrc = (repoName: string) => {
+    return `/assets/${repoName}.png`; // Acceso directo desde la raíz
 };
 
-// Funcion para mostrar menos imagenes
-const ShowLess = () => {
-    // Reducir la cantidad de imágenes visibles en 6
-    visibleCount.value -= 6;
+// Maneja el error cuando una imagen no se carga correctamente
+const handleImageError = (index: number) => {
+    console.warn(`No se encontró imagen para el repositorio en el índice ${index}`);
+    
+    // Remover el repositorio sin imagen de visibleRepos
+    visibleRepos.value.splice(index, 1);
+};
 
-    // Asegurarse de que no bajemos por debajo del número mínimo de imágenes visibles
+// Función para mostrar más repositorios
+const showMore = () => {
+    visibleCount.value += 6; // Aumentamos el número de repositorios visibles
+
+    // Actualizamos visibleRepos basado en el nuevo valor de visibleCount
+    visibleRepos.value = allRepos.value.slice(0, visibleCount.value);
+
+    updateButtons(); // Verificamos si hay que ocultar o mostrar botones
+};
+
+// Función para mostrar menos repositorios
+const showLess = () => {
+    visibleCount.value -= 6; // Reducimos el número de repos visibles
+
     if (visibleCount.value <= numImagesLess) {
-        visibleCount.value = numImagesLess;
-        showLessButton.value = false;  // Oculta el botón "Ver menos" si se alcanzó el mínimo
+        visibleCount.value = numImagesLess; // No mostramos menos de 6 repos
     }
 
-    // Actualizamos visibleImages con la nueva cantidad de imágenes visibles
-    visibleImages.value = visibleImages.value.slice(0, visibleCount.value);
+    visibleRepos.value = allRepos.value.slice(0, visibleCount.value);
+    updateButtons(); // Actualiza la visibilidad de los botones
+};
+
+// Actualiza la visibilidad de los botones
+const updateButtons = () => {
+    showMoreButton.value = visibleCount.value < allRepos.value.length;
+    showLessButton.value = visibleCount.value > numImagesLess;
 };
 
 </script>

@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,vue}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        helvetica: ['Helvetica', 'Arial', 'sans-serif'],  // Agrega Helvetica aquí
+      },
+    },
   },
   plugins: [],
 }
