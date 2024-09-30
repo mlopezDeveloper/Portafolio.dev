@@ -1,12 +1,12 @@
 <template>
-    <section class="select-none pt-10">
+    <section class="select-none pt-2 sm:pt-10 mx-4 my-4">
         <div class="m-5 flex items-center">
-            <div class="py-4 flex items-center w-full">
-                <h2 class="font-mono text-left text-5xl font-bold uppercase mr-4">
+            <div class="py-4 flex items-center w-full justify-center">
+                <h2 class="font-mono sm:text-left text-5xl font-bold uppercase sm:mr-4">
                     Proyectos<span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span>
                 </h2>
-                <div class="flex-grow border-b border-gray-300"></div>
+                <div class="flex-grow border-b border-gray-300 hidden md:block"></div>
             </div>
         </div>
         <div class="font-mono bg-gray-900 rounded-lg mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
