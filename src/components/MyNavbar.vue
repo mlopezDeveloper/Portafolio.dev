@@ -20,7 +20,7 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <a v-for="item in navigation" :key="item.name" :href="item.href"
-                                :class="[item.current ? 'animate-bounce bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-mono' : 'text-gray-200 font-mono hover:bg-gradient-to-r from-violet-600 to-indigo-600 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']"
+                                :class="[item.current ? 'animate-bounce bg-gradient-to-r from-violet-600 to-indigo-600 text-white  ' : 'text-gray-200   hover:bg-gradient-to-r from-violet-600 to-indigo-600 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']"
                                 :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
                         </div>
                     </div>

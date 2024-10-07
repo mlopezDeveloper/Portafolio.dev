@@ -1,9 +1,9 @@
 <template>
-    <footer class="select-none pt-10 mb-10 font-mono">
+    <footer class="select-none pt-10 mb-10  ">
         <div class="m-5 flex items-center pt-5">
             <div class="py-4 flex items-center w-full">
                 <div class="flex-grow border-b border-gray-300"></div> <!-- Línea horizontal -->
-                <h2 class="font-mono text-left text-5xl font-bold uppercase mx-4">Contacto</h2>
+                <h2 class="  text-left text-5xl font-bold uppercase mx-4">Contacto</h2>
                 <div class="flex-grow border-b border-gray-300"></div> <!-- Línea horizontal -->
             </div>
         </div>
@@ -18,7 +18,7 @@
                     <p class="m-4">© 2024 portafolio v.2 por mlopez.</p>
                 </div>
             </div>
-            <div class="bg-gray-900 text-white sm:mt-10 rounded-lg mx-10 sm:mx-32 max-w-2xl px-4 py-16 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
+            <div class="bg-gray-900 text-white sm:mt-10 rounded-lg mx-4 sm:mx-32 max-w-2xl px-4 py-10 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
             <form @submit.prevent="sendEmail" class="space-y-6">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-paper" viewBox="0 0 16 16">

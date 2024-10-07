@@ -1,5 +1,5 @@
 <template>
-    <section class="relative min-h-screen flex flex-col justify-center overflow-hidden font-mono">
+    <section class="relative min-h-screen flex flex-col justify-center overflow-hidden  ">
         <div class="w-full max-w-6xl mx-auto px-4 md:px-4 py-6">
             <div class="flex flex-col justify-center divide-y divide-slate-200 ">
     
@@ -14,7 +14,7 @@
                             </div>
                             <div class="text-slate-500">Desarrollo, actualización y mantenimiento de aplicaciones orientados al negocio de seguros para distintas empresas del mismo.</div>
                             <div class="flex flex-wrap gap-2 mb-12 mt-2">
-                                <span v-for="tech in TechnologyS" :key="tech.name" class="font-mono text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
+                                <span v-for="tech in TechnologyS" :key="tech.name" class="  text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
                             </div>
                         </div>
                         <div class="relative pl-8 sm:pl-32 py-6 group">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="text-slate-500">Analista IT SSR - Equipo BAU con experiencia en sistemas centrales (SISE). Enfocado en el mantenimiento continua del sistemas y automatizaciones de procesos con Talend.</div>
                             <div class="flex flex-wrap gap-2 mb-12 mt-2">
-                                <span v-for="tech in TechnologyC1" :key="tech.name" class="font-mono text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
+                                <span v-for="tech in TechnologyC1" :key="tech.name" class="  text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
                             </div>
                         </div>
                         <div class="relative pl-8 sm:pl-32 py-6 group">
@@ -36,7 +36,7 @@
                             </div>
                             <div class="text-slate-500">Analista IT - Desarrollo, actualizaciones y mantenimiento de aplicaciones orientados al negocio de seguros</div>
                             <div class="flex flex-wrap gap-2 mb-12 mt-2">
-                                <span v-for="tech in TechnologyC2" :key="tech.name" class="font-mono text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
+                                <span v-for="tech in TechnologyC2" :key="tech.name" class="  text-xs px-2 py-1 rounded bg-gray-900 text-white hover:text-violet-400 transition-colors">{{ tech.name }}</span>
                             </div>
                         </div>
                     </div>

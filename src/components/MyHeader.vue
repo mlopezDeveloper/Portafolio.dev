@@ -1,25 +1,25 @@
 <template>
-    <header class="select-none">
+    <header class="select-none animate-blurred-fade-in">
         <div class="m-5 flex flex-col md:flex-row items-center">
             <div class="py-4 sm:mr-5">
                 <h1 class="text-center text-4xl sm:text-6xl sm:text-left md:text-5xl lg:text-6xl font-bold uppercase">
                     Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 animate-pulse">Marcos López.</span>
                 </h1>
                 <div class="sm:border-l-2 border-gray-300 ps-5 mt-4">
-                    <p class="font-mono text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm uppercase ">
+                    <p class="  text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm  ">
                         Desarrollador de Soluciones Informáticas  
                     </p>
-                    <p class="font-mono text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm uppercase">
+                    <p class="  text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm ">
                         Amante de la tecnología y la enseñanza
                     </p>
-                    <p class="font-mono text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm uppercase">
+                    <p class="  text-center sm:text-left font-medium text-gray-500 text-xs lg:text-sm ">
                         Una buena UX es la que no te genera una pregunta
                     </p>
                 </div>
                 <div class="flex flex-col md:flex-row gap-4 items-center space-x-2 py-5">
                     <div class="">
                         <button
-                        class="flex overflow-hidden ring-[5px] ring-white w-[4rem] hover:w-[5.5rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-5 py-2 rounded-full transition-all duration-300 ease-in-out hover:scale-105 font-[revert] active:scale-100 shadow-lg"
+                        class="animate-bounce sm:animate-none flex overflow-hidden  w-[4rem] hover:w-[5.5rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white px-5 py-2 rounded-full transition-all duration-300 ease-in-out hover:scale-105 font-[revert] active:scale-100 shadow-lg"
                         aria-label="Descargar CV"
                         >
                         CV
@@ -29,22 +29,37 @@
                         </svg>
                         </button>
                     </div>
-                    <div class="bg-gray-500/15 rounded-3xl inline-flex items-center">
+                    <div class="bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 p-2 rounded-3xl inline-flex items-center shadow-lg">
                         <div class="flex -space-x-4 rtl:space-x-reverse mx-2 my-2">
-                            <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 1">
-                            <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 2">
-                            <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 3">
-                            <img class="w-9 h-9 border-2 border-white rounded-full" src="@/assets/cliente1.jpg" alt="Cliente 4">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 1">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 2">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 3">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 4">
                         </div>
-                        <h4 class="text-black pr-2 font-mono"><span class="font-semibold">+1</span> Cliente</h4>
+                        <h4 class="pr-2 text-white font-semibold tracking-wide">
+                            <span class="font-bold text-yellow-300">+1</span> Cliente
+                        </h4>
                     </div>
+
 
                 </div>
             </div>
             <div class="py-4 sm:mr-10">
                 <div class="absolute w-40 h-40 bg-dots-pattern transform -translate-x-6 -translate-y-6 z-0 hidden md:block"></div>
                 <div class="relative shadow-lg bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[20rem] overflow-hidden">
-                    <img class="h-30 w-auto scoped shadow-md z-10" src="../assets/fperfil.png" alt="Foto de perfil de Marcos López" />
+                    <div class="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">
+                        MLOPEZ
+                    </div>
+                    <div class="absolute top-36 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">
+                        DESARROLLADOR
+                    </div>
+                    <div class="absolute top-56 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">
+                        FULLSTACK
+                    </div>
+                    <div class="absolute top-[19rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">
+                        SOÑADOR
+                    </div>
+                    <img class="relative h-30 w-auto scoped shadow-md z-10" src="../assets/fperfil.png" alt="Foto de perfil de Marcos López" />
                 </div>
                 <div class="absolute w-40 h-40 bg-dots-pattern transform translate-x-48 -translate-y-36 z-[-1] hidden md:block"></div>
             </div>
@@ -58,12 +73,20 @@
         <div class=" bg-gray-900 mx-4 rounded-lg hidden md:block">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex flex-col md:flex-row h-16 sm:h-32 items-center justify-between">
-                    <P class="font-mono text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">5<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Años de experiencia</P>
-                    <P class="font-mono text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">2<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Empresa en las que trabaje</P>
-                    <P class="font-mono text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">1<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Clientes felices</P>
-                    <P class="font-mono text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">10<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Proyectos finalizados</P>
+                    <P class="  text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">5<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Años de experiencia</P>
+                    <P class="  text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">2<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Empresa en las que trabaje</P>
+                    <P class="  text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">1<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Clientes felices</P>
+                    <P class="  text-gray-200 sm:text-center"><span class="font-semibold flex justify-center text-xl">10<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span></span> Proyectos finalizados</P>
                 </div>
             </div> 
         </div>
     </header>
 </template>
+<script>
+import animations from '@midudev/tailwind-animations'
+
+export default {
+  // ...rest of the options
+    plugins: [animations],
+}
+</script>
