@@ -1,13 +1,17 @@
 <template>
-    <section class="select-none px-4 sm:pt-10">
+    <section class="select-none px-6 sm:pt-10">
         <div class="m-5 flex items-center">
             <div class="py-4 flex sm:items-center w-full justify-center">
-                <h2 class="  sm:text-left text-5xl font-bold uppercase sm:mr-4">Sobre Mi<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span></h2>
+                <h2 class="sm:text-left text-5xl font-bold uppercase sm:mr-4 relative inline-block">
+                    Sobre Mi<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span>
+                    <span class="after:block after:h-1 after:w-12 after:bg-indigo-600 after:mt-2 after:mx-auto"></span>
+                </h2>
+
                 <div class="flex-grow border-b border-gray-300 hidden md:block"></div> <!-- Línea horizontal -->
             </div>
         </div>
-        <div class="m-5 grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
-            <div class="space-y-4 text-center sm:text-start">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
+            <div class="space-y-4 sm:text-start">
                 <p class="leading-relaxed  ">
                     <span class="bg-gradient-to-r from-violet-600 to-indigo-600 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">S</span>oy un profesional del área de IT con más de 4 años de experiencia en el sector asegurador, donde he desempeñado roles como analista de soporte de aplicaciones y, actualmente, como analista de desarrollo. Me encuentro en un proceso de formación como desarrollador web fullstack, en el que estoy adquiriendo habilidades sólidas en el diseño e implementación de interfaces de usuario atractivas y funcionales.
                 </p>
@@ -37,10 +41,10 @@
                 </div>
             </div>
         </div>
-    <div class="m-5 flex items-center pt-2 sm:pt-10">
+    <div class=" flex items-center pt-2 sm:pt-10">
         <div class="py-4 flex items-center w-full">
             <div class="flex-grow border-b border-gray-300"></div> <!-- Línea horizontal -->
-            <h2 class="  text-left text-5xl font-bold uppercase sm:mr-4">Experencias<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span></h2>
+            <h2 class="  text-center sm:text-left text-5xl font-bold uppercase sm:mr-4">Experencias<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span></h2>
         </div>
     </div>
     <MyTimeline/>

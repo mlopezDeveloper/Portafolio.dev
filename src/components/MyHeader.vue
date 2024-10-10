@@ -1,7 +1,7 @@
 <template>
     <header class="select-none animate-blurred-fade-in">
         <div class="m-5 flex flex-col md:flex-row items-center">
-            <div class="py-4 sm:mr-5">
+            <div class="pt-4 sm:mr-5">
                 <h1 class="text-center text-4xl sm:text-6xl sm:text-left md:text-5xl lg:text-6xl font-bold uppercase">
                     Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 animate-pulse">Marcos López.</span>
                 </h1>
@@ -16,8 +16,9 @@
                         Una buena UX es la que no te genera una pregunta
                     </p>
                 </div>
-                <div class="flex flex-col md:flex-row gap-4 items-center space-x-2 py-5">
-                    <div class="">
+                <div class="flex flex-col md:flex-row gap-4 items-center space-x-2 pb-5 pt-8">
+                    <div class="flex items-center gap-4">
+                        <div class="h-2 w-20 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full"></div>
                         <button
                         class="animate-bounce sm:animate-none flex overflow-hidden  w-[4rem] hover:w-[5.5rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white px-5 py-2 rounded-full transition-all duration-300 ease-in-out hover:scale-105 font-[revert] active:scale-100 shadow-lg"
                         aria-label="Descargar CV"
@@ -28,7 +29,9 @@
                             <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
                         </svg>
                         </button>
+                        <div class="h-2 w-20 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full"></div>
                     </div>
+                    
                     <div class="bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 p-2 rounded-3xl inline-flex items-center shadow-lg">
                         <div class="flex -space-x-4 rtl:space-x-reverse mx-2 my-2">
                             <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 1">
