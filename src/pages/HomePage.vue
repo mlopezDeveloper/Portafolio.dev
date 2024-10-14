@@ -1,9 +1,9 @@
 <template>
-    <MyNavbar/>
-    <MyHeader/>
-    <AboutMe/>
-    <MyProjects/>
-    <MyContact/>
+        <MyNavbar/>
+        <MyHeader/>
+        <AboutMe/>
+        <MyProjects/>
+        <MyContact/>
 </template>
 <script setup lang="ts">
 import MyNavbar from '../components/MyNavbar.vue';

@@ -1,5 +1,5 @@
 <template>
-    <section class="relative min-h-screen flex flex-col justify-center overflow-hidden  ">
+    <section id="experiencias" class="relative xl:min-h-screen flex flex-col justify-center overflow-hidden  ">
         <div class="w-full max-w-6xl mx-auto px-4 md:px-4 py-6">
             <div class="flex flex-col justify-center divide-y divide-slate-200 ">
     
