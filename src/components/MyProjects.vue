@@ -1,15 +1,16 @@
 <template>
-    <section class="select-none pt-2 sm:pt-10 mx-4 my-4">
+    <section class="select-none sm:pt-10 mx-4 my-4">
         <div class="m-5 flex items-center">
             <div class="py-4 flex items-center w-full justify-center">
-                <h2 class="  sm:text-left text-5xl font-bold uppercase sm:mr-4">
+                <h2 class="  sm:text-left text-[2.5rem] font-bold uppercase sm:mr-4">
                     Proyectos<span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span>
+                        <span class="after:block after:h-1 after:w-12 after:bg-indigo-600 after:mt-2 after:mx-auto"></span>
                 </h2>
                 <div class="flex-grow border-b border-gray-300 hidden md:block"></div>
             </div>
         </div>
-        <div class="  bg-gray-900 rounded-lg mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
+        <div class="  bg-gray-900 rounded-lg mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-6">
             <div ref="imageGrid"
                 class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
                 <figure v-for="(repo, index) in visibleRepos" :key="index"
@@ -21,7 +22,7 @@
                         class="flex justify-around absolute w-full p-3 text-lg text-white bg-gradient-to-b from-transparent to-gray-700 bottom-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <div class="flex items-center">
                             <p class="mr-1">{{ repo.stargazers_count }}</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#daaa3f" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                             </svg>
                         </div>
