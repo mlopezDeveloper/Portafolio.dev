@@ -2,7 +2,7 @@
     <section class="select-none sm:pt-10 mx-4 my-4">
         <div class="m-5 flex items-center">
             <div id="proyectos" class="py-4 flex items-center w-full justify-center">
-                <h2 class="sm:text-left text-[2.5rem] xl:text-[3rem] font-bold uppercase sm:mr-4">
+                <h2 class="sm:text-left text-[2.5rem] xl:text-[3rem] font-bold uppercase sm:mr-4 dark:text-white">
                     Proyectos<span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">.</span>
                     <span class="after:block after:h-1 after:w-12 after:bg-indigo-600 after:mt-2 after:mx-auto"></span>
                 </h2>

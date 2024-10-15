@@ -1,5 +1,5 @@
 <template>
-    <div class="text-gray-200 sm:text-center">
+    <div class="text-gray-200 dark:text-gray-800 font-semibold sm:text-center">
         <span class="font-semibold flex justify-center md:text-xl xl:text-3xl">
         {{ value }}
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">+</span>

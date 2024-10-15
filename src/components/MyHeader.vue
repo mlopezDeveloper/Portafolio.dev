@@ -2,7 +2,7 @@
     <header id="inicio" class="select-none animate-blurred-fade-in">
         <div class="m-5 flex flex-col md:flex-row items-center md:justify-around xl:justify-around">
             <div class="pt-4 sm:mr-5">
-                <h1 class="text-center md:text-left xl:text-left text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-bold uppercase">
+                <h1 class="text-center md:text-left xl:text-left text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-bold uppercase dark:text-white">
                     Hola, soy <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600 animate-pulse">Marcos López.</span>
                 </h1>
@@ -20,7 +20,7 @@
                 <div class="flex flex-col md:flex-row gap-4 items-center space-x-2 pb-5 pt-8">
                     <div class="hidden md:flex items-center gap-4">
                         <button
-                            class="animate-bounce sm:animate-none flex overflow-hidden w-[4rem] md:w-[6rem] md:h-[4rem] xl:w-[6rem] xl:h-[4rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white px-5 py-2 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 font-bold"
+                            class="animate-bounce sm:animate-none flex overflow-hidden w-[4rem] md:w-[6rem] md:h-[4rem] xl:w-[6rem] xl:h-[4rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white px-5 py-2 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 font-bold dark:text-gray-800"
                             aria-label="Descargar CV"
                         >
                             CV
@@ -37,26 +37,28 @@
                             <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 3">
                             <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 4">
                         </div>
-                        <h4 class="pr-2 text-white font-semibold tracking-wide">
-                            <span class="font-bold text-yellow-300">+1</span> Cliente
+                        <h4 class="pr-2 text-white font-semibold tracking-wide dark:text-gray-800">
+                            <span class="font-bold text-yellow-300 dark:text-gray-800">+1</span> Cliente
                         </h4>
                     </div>
                 </div>
             </div>
             <div class="py-4 sm:mr-10 md:w-1/3 xl:w-1/4 relative">
-                <div class="absolute w-40 h-40 bg-dots-pattern transform -translate-x-4 -translate-y-6 z-0 hidden md:block"></div>
-                <div class="relative shadow-lg bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[20rem] overflow-hidden">
-                    <div class="absolute inset-7 border-[3px] border-white rounded-[20rem] pointer-events-none"></div>
+                <div class="absolute w-40 h-40 bg-dots-pattern transform -translate-x-4 -translate-y-4 z-0 hidden md:block "></div>
+                <div class="absolute w-40 h-40 bg-dots-pattern-dark transform -translate-x-4 -translate-y-4 z-[-1] dark:z-0 dark:hidden dark:md:block"></div>
+                <div class="relative shadow-lg bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[20rem] overflow-hidden z-10">
+                    <div class="absolute inset-7 border-[3px] border-white dark:border-gray-800 rounded-[20rem] pointer-events-none z-[1]"></div>
                     <div class="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">MLOPEZ</div>
                     <div class="absolute top-36 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">DESARROLLADOR</div>
                     <div class="absolute top-56 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">FULLSTACK</div>
                     <div class="absolute top-[19rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">SOÑADOR</div>
                     <img class="relative h-30 w-auto scoped shadow-md z-10" src="../assets/fperfil.png" alt="Foto de perfil de Marcos López" />
                 </div>
-                <div class="absolute w-40 h-40 bg-dots-pattern transform translate-x-56 -translate-y-36 z-[-1] hidden md:block"></div>
+                <div class="absolute w-40 h-40 bg-dots-pattern transform translate-x-56 -translate-y-36 z-[-0] hidden md:block"></div>
+                <div class="absolute w-40 h-40 bg-dots-pattern-dark transform translate-x-56 -translate-y-36 z-[-1] dark:z-0 dark:hidden dark:md:block"></div>
             </div>
         </div>
-        <div class="hidden md:block xl:block bg-gray-900 mx-5 rounded-lg shadow-lg p-4">
+        <div class="hidden md:block xl:block bg-gray-900 dark:bg-[#e9e9e9] mx-5 rounded-lg shadow-lg p-4">
             <div class="mx-auto md:max-w-5xl xl:max-w-7xl px-2">
                 <div class="relative flex flex-col md:flex-row h-24 items-center justify-between">
                     <StatCard value="5" label="Años de experiencia" />

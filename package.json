@@ -18,7 +18,8 @@
     "@heroicons/vue": "^2.1.5",
     "@midudev/tailwind-animations": "^0.1.0",
     "axios": "^1.7.7",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

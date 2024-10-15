@@ -1,7 +1,7 @@
 <template>
 <div class="flex items-center gap-6 justify-center sm:justify-start">
-    <span class="uppercase text-base text-[#1f2937] font-bold">Mis Links</span>
-    <svg
+    <span class="uppercase text-base text-[#1f2937] dark:text-[#e9e9e9] font-bold">Mis Links</span>
+    <svg class="dark:fill-[#e9e9e9]"
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"
