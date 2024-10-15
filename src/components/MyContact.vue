@@ -3,7 +3,8 @@
         <div class="m-5 lg:flex items-center pt-5">
             <div class="py-4 lg:flex items-center w-full">
                 <div class="flex-grow border-b border-gray-300 hidden md:block"></div>
-                <h2 class="text-center text-[2.5rem] xl:text-[3rem] font-bold uppercase mx-4 dark:text-white">Contacto
+                <h2 class="text-center text-[2.5rem] xl:text-[3rem] font-bold uppercase mx-4 dark:text-white">
+                    Contacto
                     <span class="after:block after:h-1 after:w-12 after:bg-indigo-600 after:mt-2 after:mx-auto"></span>
                 </h2>
                 <div class="flex-grow border-b border-gray-300 hidden md:block"></div>
@@ -26,31 +27,28 @@
                         <label for="name" class="block text-sm font-medium">Nombre</label>
                         <input id="name" v-model="form.name" type="text"
                             class="mt-4 pl-2 text-black block w-full p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="TU NOMBRE"
-                            required />
+                            placeholder="TU NOMBRE" required />
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium">Asunto</label>
                         <input id="subject" v-model="form.subject" type="text"
                             class="mt-4 pl-2 text-black block w-full p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="ASUNTO"
-                            required />
+                            placeholder="ASUNTO" required />
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium">Email</label>
                         <input id="email" v-model="form.email" type="email"
                             class="mt-1 pl-2 text-black block w-full p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="TU EMAIL"
-                            required />
+                            placeholder="TU EMAIL" required />
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium">Mensaje</label>
                         <textarea id="message" v-model="form.message" rows="4"
                             class="mt-1 pl-2 text-black block w-full p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="MENSAJE"
-                            required></textarea>
+                            placeholder="MENSAJE" required></textarea>
                     </div>
                     <div>
+                        <a :href="mailtoLink" class="hidden">Correo de contacto</a>
                         <button type="submit"
                             class="w-auto bg-gradient-to-r from-violet-600 to-indigo-600 text-white py-2 px-4 rounded-md">
                             Enviar Mensaje
@@ -77,15 +75,21 @@ export default defineComponent({
 
         const mailtoLink = computed(() => {
             const emailTo = 'developermlopez@gmail.com';
-            return `mailto:${emailTo}?subject=${encodeURIComponent(form.subject + '-' + form.name)}&body=${encodeURIComponent(form.message)}&cc=${encodeURIComponent(form.email)}`;
+            return `mailto:${emailTo}?subject=${encodeURIComponent(form.subject + ' - ' + form.name)}&body=${encodeURIComponent(form.message)}&cc=${encodeURIComponent(form.email)}`;
         });
 
         const sendEmail = () => {
+            if (!form.name || !form.subject || !form.email || !form.message) {
+                alert('Por favor completa todos los campos.');
+                return;
+            }
             window.location.href = mailtoLink.value;
         };
 
+        // Exponemos 'mailtoLink' y 'form' en el objeto de retorno
         return {
             form,
+            mailtoLink,
             sendEmail
         };
     }
