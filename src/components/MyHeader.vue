@@ -32,14 +32,14 @@
                     </div>
                     <div class="bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 p-2 rounded-3xl inline-flex items-center shadow-lg">
                         <div class="flex -space-x-4 rtl:space-x-reverse mx-2 my-2">
-                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 1">
-                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 2">
-                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 3">
-                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.jpg" alt="Cliente 4">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.avif" alt="Cliente 1">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.avif" alt="Cliente 2">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.avif" alt="Cliente 3">
+                            <img class="w-9 h-9 border-2 border-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300" src="@/assets/cliente1.avif" alt="Cliente 4">
                         </div>
-                        <h4 class="pr-2 text-white font-semibold tracking-wide dark:text-gray-800">
+                        <p class="pr-2 text-white font-semibold tracking-wide dark:text-gray-800">
                             <span class="font-bold text-yellow-300 dark:text-gray-800">+1</span> Cliente
-                        </h4>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="absolute top-36 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">DESARROLLADOR</div>
                     <div class="absolute top-56 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">FULLSTACK</div>
                     <div class="absolute top-[19rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 text-white text-7xl font-bold opacity-20">SOÑADOR</div>
-                    <img class="relative h-30 w-auto scoped shadow-md z-10" src="../assets/fperfil.png" alt="Foto de perfil de Marcos López" />
+                    <img class="relative h-30 w-auto scoped shadow-md z-10" src="../assets/fperfil.avif" alt="Foto de perfil de Marcos López" />
                 </div>
                 <div class="absolute w-40 h-40 bg-dots-pattern transform translate-x-56 -translate-y-36 z-[-0] hidden md:block"></div>
                 <div class="absolute w-40 h-40 bg-dots-pattern-dark transform translate-x-56 -translate-y-36 z-[-1] dark:z-0 dark:hidden dark:md:block"></div>

@@ -14,10 +14,12 @@
     </svg>
     <div class="flex items-center text-lg gap-4">
     <SocialLink
+        aria-label="LinkedIn Profile"
         href="https://www.linkedin.com/in/marcos-antonio-lopez-561a69221/"
         icon="linkedin"
     />
     <SocialLink
+        aria-label="GitHub Profile"
         href="https://github.com/mlopezDeveloper"
         icon="github"
     />
