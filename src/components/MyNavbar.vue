@@ -68,6 +68,7 @@ const navigation = [
     { name: 'Contactos', href: '#contacto', current: false }
 ];
 
+
 const isDarkMode = ref(false);
 
 // Al cargar la página, aplicar el tema si ya fue seleccionado
@@ -81,7 +82,7 @@ onMounted(() => {
 
 // Función para hacer scroll a la sección correspondiente
 const scrollToSection = (href) => {
-    const section = document.querySelector(href);
+    const section = document.querySelector(href.replace('/', '')); // Remove '/' before passing to querySelector
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }

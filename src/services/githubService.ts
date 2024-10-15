@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Acceder a la variable de entorno usando import.meta.env
 const token = import.meta.env.VITE_GITHUB_TOKEN || ''; // Asegúrate de que la variable en .env se llame VITE_GITHUB_TOKEN
-console.log('Token de GitHub:', token);
+// console.log('Token de GitHub:', token);
 const githubApi = axios.create({
     baseURL: 'https://api.github.com/users/mlopezDeveloper/repos',
     headers: {
